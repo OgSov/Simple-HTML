@@ -1,0 +1,303 @@
+body{
+    font-family: 'Font Awesome 5 Free', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#header{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px repeat(3, 1fr);
+    background-color: #333;
+    color: #d6d6d6;
+    text-transform: uppercase;
+}
+
+/*--------------- USER_NAV------------------ */
+
+#header .user-nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9em;
+    font-family: 'Font Awesome 5 Free';
+}
+#header .user-nav ul{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+#header .user-nav .user-nav-left li a{
+    padding-right: 1.5em;
+    border-right: 1px solid #d6d6d6;
+    color: #d6d6d6;
+    text-decoration: none;
+}
+#header .user-nav .user-nav-left li:last-child a{
+    padding: 0;
+    border: none;
+}
+
+#header .user-nav .user-nav-right li p{
+    padding-right: 5em;
+    padding-left: 1em;
+    border-right: 1px solid #d6d6d6;
+    color: #d6d6d6;
+    float: right;
+}
+
+#header .user-nav .user-nav-right li:last-child p{
+    margin-left: 1em;
+    border: none;
+    padding: 0;
+}
+
+/* -----------------MAIN_NAV---------------- */
+
+#header .main{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+#header .main h1{
+    font-size: 1.8em;
+}
+#header .main-nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(95, 87, 87, 0.8);
+
+}
+#header .main-nav ul{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+#header .main-nav ul li a{
+    text-decoration: none;
+    color: #d6d6d6;
+}
+
+/* --------- CENTER-------- */
+
+#header .text-1{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10em;
+}
+#header .text-1 p{
+    font-size: 1.5em;
+}
+#header .text-1 h2{
+    font-size: 2.5em;
+}
+
+#header .btn{
+    width: 60%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    color: #d6d6d6;
+    padding-left: 10em;
+}
+#header .btn .btn-1{
+    margin-right: 5em;
+}
+#header .btn .btn-1,
+#header .btn .btn-2{
+    border: 1px solid #d6d6d6;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#header .btn .btn-1:hover,
+#header .btn .btn-2:hover{
+    border: none;
+    border: 1px solid rgba(255, 0, 0, 0.555);
+    background-color: rgba(255, 0, 0, 0.555);
+    transition: 0.5s;
+}
+
+/* ---------PRODUCTS_PANELS--------------- */
+
+#products{
+    height: 120vh;
+    width: 100vw;
+    background-color: #d6d6d6;
+    color: #333;
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr;
+}
+#products h2{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+}
+#products .panels-top{
+    display: flex;
+    justify-content: space-evenly;
+}
+#products .panels-top li{
+    cursor: pointer;
+}
+#products .panels-top .back-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    background-color: #333;
+    color: #d6d6d6;
+    transform: rotateY(90deg);
+    font-size: 2em;
+}
+#products .panels-top .front-top{
+    position: absolute;
+}
+
+#products .panels-top li:hover .back-top{
+    animation: flip-top 0.2s 0.2s ease-out forwards reverse;
+}
+#products .panels-top li:hover .front-top{
+    animation: flip-top 0.2s ease-in forwards;
+}
+
+
+@keyframes flip-top{
+    0%{ transform: rotateY(0deg); }
+    100%{ transform: rotateY(90deg);}
+}
+#products .panels-bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+#products .panels-bottom li{
+    cursor: pointer;
+}
+#products .panels-bottom .back-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    background-color: #333;
+    color: #d6d6d6;
+    transform: rotateY(90deg);
+    font-size: 2em;
+}
+#products .panels-bottom .front-bottom{
+    position: absolute;
+}
+
+#products .panels-bottom li:hover .back-bottom{
+    animation: flip-top 0.2s 0.2s ease-out forwards reverse;
+}
+#products .panels-bottom li:hover .front-bottom{
+    animation: flip-top 0.2s ease-in forwards;
+}
+
+
+@keyframes flip-top{
+    0%{ transform: rotateY(0deg); }
+    100%{ transform: rotateY(90deg);}
+}
+
+/* ------------------------------------ */
+
+
+/* ---------------SECTION----------- */
+.lorem{
+    width: 100vw;
+    background-color: #333;
+    color: #d6d6d6;
+    text-align: center;
+    padding: 3em 0;
+}
+.lorem h3{
+    font-size: 3em;
+}
+.lorem p{
+    font-size: 1.5em;
+    padding: 1em 0;
+}
+
+/* ----------------CAROUSEL-------------- */
+
+
+#product-carousel{
+    display: grid;
+    grid-template: 80vh / 45vw 45vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    color: #d6d6d6;
+}
+#product-carousel .lorem-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#product-carousel .lorem-2 .lorem-top,
+#product-carousel .lorem-2 .lorem-bottom{
+    font-size: 1.2em;
+    margin-left: 2.5em;
+}
+#product-carousel .lorem-2 .lorem-top p{
+    line-height: 1.5em;
+    padding: 1em 0;
+}
+
+#product-carousel .lorem-2 .lorem-bottom{
+    display: flex;
+    margin-left: 2.5em;
+}
+#product-carousel .lorem-2 .lorem-bottom div{
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+#product-carousel .lorem-2 .lorem-bottom div i{
+    color: rgb(202, 15, 15);
+    font-size: 3em;
+}
+#product-carousel .lorem-2 .lorem-bottom div h3{
+    text-transform: uppercase;
+}
+
+/* ----------------SECTION_SIGN-UP------------- */
+#sign-up{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    height: 50vh;
+    width: 100vw;
+    background-color: white;
+}
+#sign-up .card,
+#sign-up .info{
+    margin-left: 2.5em;
+    margin-top: 2.5em;
+}
+#sign-up .info h3{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+#sign-up .info>p{
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+#sign-up .info .info-1 div p{
+    width: 500px;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
+    float: ;
+}
+#sign-up .info .info-1 div:last-child p{
+    border: none;
+}
+
